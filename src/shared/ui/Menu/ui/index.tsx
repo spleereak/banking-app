@@ -7,7 +7,6 @@ import { MenuButton } from "../components/MenuButton/ui";
 
 export const Menu = () => {
   const location = usePathname();
-  console.log(location);
 
   return (
     <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 flex-row gap-9 rounded-full border border-[#FFFFFF0F] bg-[rgba(255,255,255,0.06)] p-4 backdrop-blur-[7px]">

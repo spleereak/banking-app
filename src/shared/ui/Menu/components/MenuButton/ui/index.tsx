@@ -23,6 +23,11 @@ export const MenuButton: React.FC<I_MenuButton> = ({
         setShouldAnimate(true);
       }, 50);
       return () => clearTimeout(timer);
+    } else {
+      const timer = setTimeout(() => {
+        setShouldAnimate(false);
+      }, 0);
+      return () => clearTimeout(timer);
     }
   }, [isActive]);
 
@@ -35,7 +40,7 @@ export const MenuButton: React.FC<I_MenuButton> = ({
       )}
     >
       <Image
-        src={isActive ? activeIcon : icon}
+        src={shouldAnimate ? activeIcon : icon}
         loading="eager"
         priority
         className="h-24 w-24"
@@ -46,7 +51,7 @@ export const MenuButton: React.FC<I_MenuButton> = ({
       <p
         className={cn(
           "caption text-white transition-colors duration-500",
-          isActive && "text-yellow-main"
+          shouldAnimate && "text-yellow-main"
         )}
       >
         {text}
