@@ -9,7 +9,7 @@ export const HomeHeader = ({ className }: { className?: string }) => {
   };
 
   return (
-    <div className={cn("flex h-48 flex-row gap-9 px-16", className)}>
+    <div className={cn("flex h-48 flex-row gap-9 px-32", className)}>
       <Image
         src={mockData.userAvatar}
         alt="Image"
