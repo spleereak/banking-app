@@ -8,14 +8,18 @@ import { I_BankCard } from "../types";
 
 export const BankCard: React.FC<I_BankCard> = ({ className, data }) => {
   return (
-    <div className={cn("h-195 relative flex flex-col p-16", className)}>
+    <div
+      className={cn(
+        "h-195 relative flex w-full flex-col rounded-[1.5625rem] p-16",
+        className
+      )}
+    >
       <Image
         src={data.cardImage}
         alt="Image"
         fill
-        className="absolute bottom-0 left-0 right-0 top-0 object-cover"
+        className="max-w-327 absolute bottom-0 left-0 right-0 top-0"
         quality={100}
-        sizes="100vw"
         loading="eager"
         priority
       />
