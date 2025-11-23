@@ -14,6 +14,8 @@ export const BankCard: React.FC<I_BankCard> = ({ className, data }) => {
         alt="Image"
         fill
         className="absolute bottom-0 left-0 right-0 top-0 object-cover"
+        quality={100}
+        sizes="100vw"
         loading="eager"
         priority
       />

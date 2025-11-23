@@ -14,7 +14,8 @@ export const FunctionsBlock = ({ className }: { className?: string }) => {
       <IconButton text="Transfer">
         <Image
           alt="Icon"
-          src="/icons/transfer.svg"
+          src="/images/transfer.png"
+          quality={100}
           width={20}
           height={20}
           className="h-20 w-20 object-cover"
