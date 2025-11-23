@@ -19,7 +19,6 @@ export const MenuButton: React.FC<I_MenuButton> = ({
 
   useEffect(() => {
     if (isActive) {
-      // Небольшая задержка для запуска анимации после рендера
       const timer = setTimeout(() => {
         setShouldAnimate(true);
       }, 50);
