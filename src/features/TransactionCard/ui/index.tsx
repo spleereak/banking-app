@@ -17,6 +17,7 @@ export const TransactionCard: React.FC<I_TransactionCard> = ({
         alt="Image"
         width={44}
         height={44}
+        quality={100}
         className="h-44 w-44 rounded-full object-cover"
       />
       <div className="flex w-full flex-col gap-5">

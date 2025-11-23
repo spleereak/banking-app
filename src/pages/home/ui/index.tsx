@@ -22,7 +22,7 @@ const transactionsMockData = [
   {
     id: 2,
     username: "Ranel Gataullin",
-    userAvatar: "/icons/profile.svg",
+    userAvatar: "/images/profile.png",
     date: "18 August",
     time: "2:26 am",
     payment_amount: 155,
@@ -38,7 +38,7 @@ const transactionsMockData = [
   {
     id: 4,
     username: "Ranel Gataullin",
-    userAvatar: "/icons/profile.svg",
+    userAvatar: "/images/profile.png",
     date: "12 August",
     time: "2:26 am",
     payment_amount: 155,

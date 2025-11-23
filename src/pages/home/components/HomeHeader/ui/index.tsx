@@ -15,6 +15,7 @@ export const HomeHeader = ({ className }: { className?: string }) => {
         alt="Image"
         width={100}
         height={100}
+        quality={100}
         className="h-48 w-48 rounded-full object-cover"
       />
       <div className="flex h-full flex-col justify-between py-5">
