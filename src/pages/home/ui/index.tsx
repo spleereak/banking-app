@@ -55,7 +55,7 @@ const transactionsMockData = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-16 px-16">
+    <div className="mb-102 flex flex-col gap-16 px-16">
       <BankCard data={cardMockData} />
       <FunctionsBlock />
       <TransactionsBlock transactionsHistory={transactionsMockData} />
