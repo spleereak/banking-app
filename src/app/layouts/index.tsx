@@ -4,7 +4,9 @@ import React from "react";
 
 import { Urbanist } from "next/font/google";
 
+import { HomeHeader } from "@/pages/home/components/HomeHeader/ui";
 import "@/shared/styles/index.css";
+import { Menu } from "@/shared/ui/Menu/ui";
 
 import "../styles";
 
@@ -25,7 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanistSans.variable} antialiased`}>{children}</body>
+      <body className={`${urbanistSans.variable} antialiased`}>
+        <HomeHeader className="my-16" />
+        {children}
+        <Menu />
+      </body>
     </html>
   );
 }
