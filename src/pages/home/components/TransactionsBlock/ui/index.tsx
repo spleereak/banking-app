@@ -33,7 +33,20 @@ export const TransactionsBlock: React.FC<I_TransactionsBlock> = ({
       <div className="flex flex-row items-start gap-20">
         <Accordion
           title="August"
-          data={["text", "text", "text"]}
+          data={[
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "Jule",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December",
+          ]}
           className="bg-yellow-main z-20"
           isOpen={activeAccordion === 1}
           setIsOpen={handleClick}

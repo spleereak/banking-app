@@ -16,6 +16,8 @@ export const Accordion: React.FC<I_Accordion> = ({
   setIsOpen,
   id,
 }) => {
+  const [activeValue, setActiveValue] = React.useState(title);
+
   const triggerRef = React.useRef<HTMLDivElement>(null);
 
   const [maxWidth, setMaxWidth] = React.useState<number | undefined>(undefined);
@@ -28,6 +30,11 @@ export const Accordion: React.FC<I_Accordion> = ({
     }
   }, []);
 
+  const handleClick = (value: string) => {
+    setActiveValue(value);
+    setIsOpen(id);
+  };
+
   return (
     <div className={cn("relative rounded-[0.8125rem]", className)}>
       <div
@@ -39,7 +46,7 @@ export const Accordion: React.FC<I_Accordion> = ({
         )}
         onClick={() => setIsOpen(id)}
       >
-        <p className="p whitespace-nowrap text-black">{title}</p>
+        <p className="p whitespace-nowrap text-black">{activeValue}</p>
 
         <Image
           src="/icons/pointer.svg"
@@ -87,6 +94,7 @@ export const Accordion: React.FC<I_Accordion> = ({
                 style={{
                   transitionDelay: isOpen ? "50ms" : "0ms",
                 }}
+                onClick={() => handleClick(d)}
               >
                 {d}
               </p>
